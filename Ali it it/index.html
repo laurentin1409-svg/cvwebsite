@@ -1,0 +1,70 @@
+<div class="topnav">
+  <a class="active" href="#home" onclick="showSection('home')">Om Mig</a>
+  <a href="#erfaringer" onclick="showSection('erfaringer')">Erfaringer</a>
+  <a href="#kontakt" onclick="showSection('kontakt')">Kontakt</a>
+
+</div>
+<link rel="stylesheet" href="Navigationstyle.css">
+<div class="cv-container">
+  <section id="home" class="cv-section" style="max-width:500px; margin:30px auto; background:#f9f9f9; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:24px;">
+    <h1 style="text-align:center; color:#333;">Om Mig</h1>
+    <p style="font-size:18px; text-align:center; margin-bottom:18px;"><strong>Jeg hedder Laurentin</strong></p>
+    <p style="font-size:16px; text-align:center; margin-bottom:18px;">Jeg er 17 år gammel</p>
+    <h2 style="color:#04AA6D; margin-top:24px;">Uddannelse</h2>
+    <p style="font-size:16px; margin-bottom:10px;">Jeg har gået på Niels Brock NVG, hvor jeg har styrket mine IT-kompetencer gennem undervisning og praktiske projekter. Uddannelsen har givet mig et solidt fundament inden for IT og gjort mig endnu mere motiveret for at arbejde med teknologi.</p>
+  </section>
+  <section id="erfaringer" class="cv-section" style="display:none; max-width:500px; margin:30px auto; background:#f9f9f9; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:24px;">
+  <h2 style="color:#04AA6D; margin-top:0;">Erfaringer</h2>
+  <p style="font-size:16px; margin-bottom:16px;">Jeg har gennem min uddannelse og fritidsinteresse opnået en bred erfaring inden for IT og teknologi. Jeg har arbejdet med både hardware og software, og har lært at løse problemer effektivt og samarbejde med andre om projekter. Min nysgerrighed og motivation har gjort, at jeg hurtigt tilegner mig nye færdigheder og kan tilpasse mig forskellige opgaver.<br><br>
+  Jeg har blandt andet været med til at udvikle mindre hjemmesider og hjulpet med IT-support for familie og venner. Gennem gruppearbejde på skolen har jeg lært vigtigheden af god kommunikation og at tage ansvar for fælles resultater.<br><br>
+  Jeg har også erfaring med at sætte computere op fra bunden, installere software og fejlsøge netværksproblemer. Disse opgaver har givet mig en praktisk forståelse for IT og styrket min evne til at arbejde selvstændigt og systematisk.<br><br>
+  Jeg brænder for at lære nyt og ser altid muligheder for at udvikle mine kompetencer yderligere.</p>
+    <ul style="font-size:16px; line-height:1.7;">
+      <li>Erfaring med både hardware og software</li>
+      <li>Stærke problemløsningsevner</li>
+      <li>God til samarbejde og kommunikation</li>
+      <li>Hurtig til at lære nye teknologier</li>
+      <li>Motiveret og nysgerrig på IT</li>
+    </ul>
+  </section>
+  <section id="kontakt" class="cv-section" style="display:none; max-width:500px; margin:30px auto; background:#f9f9f9; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:24px;">
+  <h2 style="color:#04AA6D; margin-top:0;">Kontakt</h2>
+  <p style="font-size:16px;">Email: 50377@email.com</p>
+  <p style="font-size:16px;">Navn: Laurentin Gonzales Bascon</p>
+  <p style="font-size:16px;">Telefon: 12 34 56 78</p>
+  </section>
+</div>
+<script>
+function showSection(sectionId) {
+  var sections = document.querySelectorAll('.cv-section');
+  sections.forEach(function(sec) {
+    sec.style.display = 'none';
+  });
+  document.getElementById(sectionId).style.display = 'block';
+  var navLinks = document.querySelectorAll('.topnav a');
+  navLinks.forEach(function(link) {
+    link.classList.remove('active');
+  });
+  var activeLink = document.querySelector('.topnav a[href="#' + sectionId + '"]');
+  if(activeLink) activeLink.classList.add('active');
+}
+window.onload = function() {
+  showSection('home');
+};
+</script>
+<div class="cv-container">
+  <section id="home" class="cv-section" style="max-width:500px; margin:30px auto; background:#f9f9f9; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:24px;">
+    <h1 style="text-align:center; color:#333;">Om Mig</h1>
+    <p style="font-size:18px; text-align:center; margin-bottom:18px;"><strong>Jeg hedder Laurentin</strong></p>
+    <p style="font-size:16px; text-align:center; margin-bottom:18px;">Jeg er 17 år gammel</p>
+    <h2 style="color:#04AA6D; margin-top:24px;">Uddannelse</h2>
+    <p style="font-size:16px; margin-bottom:10px;">Jeg har gået på Niels Brock NVG, hvor jeg har styrket mine IT-kompetencer gennem undervisning og praktiske projekter. Uddannelsen har givet mig et solidt fundament inden for IT og gjort mig endnu mere motiveret for at arbejde med teknologi.</p>
+    <h2 style="color:#04AA6D; margin-top:24px;">Erfaringer</h2>
+    <ul style="font-size:16px; line-height:1.7;">
+      <li>IT-interesseret og nysgerrig</li>
+      <li>Arbejder struktureret og målrettet</li>
+      <li>God til at samarbejde og kommunikere</li>
+      <li>Hurtig til at lære nye teknologier</li>
+    </ul>
+  </section>
+</div>
